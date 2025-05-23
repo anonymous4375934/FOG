@@ -1,0 +1,24 @@
+group: fog_eval
+task:
+  - lambada_openai
+  - winogrande
+  - piqa
+  - social_iqa
+  - openbookqa
+  - arc_easy
+  - commonsense_qa
+  - triviaqa
+  - wikitext
+  - lambada
+  - hellaswag
+aggregate_metric_list:
+  - metric: acc
+    aggregation: mean
+    weight_by_size: false  # Set to false if you want unweighted average
+  - metric: acc_norm
+    aggregation: mean
+    weight_by_size: false
+  - metric: perplexity
+    aggregation: mean
+metadata:
+  version: 1.0
